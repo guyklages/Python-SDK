@@ -3,7 +3,7 @@ WePay Python SDK
 
 WePay's API allows you to easily add payments into your application.
 
-Full documentation at `WePay's developer documentation` at https://www.wepay.com/developer
+Full docs at WePay's Developer Documentation: https://www.wepay.com/developer
 
 Usage
 -----
@@ -19,20 +19,22 @@ Import the module::
 Instantiate
 ^^^^^^^^^^^
 
-1) Create a new ``WePay`` instance. 
-   With no arguments, it will use the production version of WePay (www.wepay.com). 
-   If called with ``production=False`` 
-      then it will use the staging version (stage.wepay.com) for testing:
+Create a new ``WePay`` instance. 
+With no arguments, it will use the WePay production version (www.wepay.com). 
+If called with ``production=False`` 
+    then it will use the staging version (stage.wepay.com) for testing::
 
-      wepay = WePay()
+    wepay = WePay()
 
-2) If your user has already authorized your application and you still have the access token, 
-      then you can instantiate the SDK with the optional ``access_token`` parameter. 
-      Afterwards, ``wepay.call()`` will use the given token for the authorization header:
+If your user already authorized your application 
+    and you still have the access token, 
+    then you can instantiate the SDK with the optional ``access_token`` parameter. 
+    Afterwards, ``wepay.call()`` will use the given token for the authorization header::
 
-      wepay = WePay(access_token=USERS_ACCESS_TOKEN)
+    wepay = WePay(access_token=USERS_ACCESS_TOKEN)
 
-3) To set an [API-Version](https://www.wepay.com/developer/reference/versioning) in the header with your call request, use::
+To set an [API-Version](https://www.wepay.com/developer/reference/versioning) 
+    in the header with your call request, use::
 
     wepay = WePay(production=False, access_token=USERS_ACCESS_TOKEN, api_version=API_VERSION)
 
